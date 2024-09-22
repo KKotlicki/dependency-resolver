@@ -1,0 +1,20 @@
+-r requirements.txt
+
+# Testing and Coverage
+pytest
+pytest-cov
+coverage
+
+# Linting and Formatting
+flake8
+black
+
+# Type Checking
+mypy
+
+# Pre-commit Hooks
+pre-commit
+
+# Documentation
+sphinx
+sphinx-autobuild
