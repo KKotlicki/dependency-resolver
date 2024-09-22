@@ -1,0 +1,23 @@
+repos:
+  - repo: https://github.com/psf/black
+    rev: 23.1.0
+    hooks:
+      - id: black
+  - repo: https://github.com/pycqa/flake8
+    rev: 6.0.0
+    hooks:
+      - id: flake8
+  - repo: local
+    hooks:
+      - id: pytest
+        name: pytest
+        entry: pytest
+        language: system
+        pass_filenames: false
+  - repo: local
+    hooks:
+      - id: update-readme
+        name: Update README Project Structure
+        entry: python generate_project_structure.py
+        language: system
+        files: README.md
