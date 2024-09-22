@@ -17,6 +17,7 @@ contact: [konrad.kotlicki@gmail.com](mailto:konrad.kotlicki@gmail.com)
   - [Command-Line Options](#command-line-options)
 - [Examples](#examples)
 - [Project Structure](#project-structure)
+- [Project Structure Explanation](#project-structure-explanation)
 - [Development](#development)
 - [Continuous Integration](#continuous-integration)
 
@@ -134,11 +135,46 @@ dep-resolver/
 
 <!-- PROJECT STRUCTURE END -->
 
+## Project Structure Explanation
+
+- .github/workflows/ci.yml: GitHub Actions workflow configuration.
+
+- docs/
+    - source/
+        - conf.py: Sphinx configuration file.
+        - dep_resolver.rst: Documentation for the dep_resolver module.
+        - index.rst: Main documentation index.
+        - modules.rst: Modules index file.
+    - Makefile: Build script for Unix systems.
+    - make.bat: Build script for Windows systems.
+- src/dep_resolver/: Source code of the package.
+    - __init__.py: Package initialization.
+    - __main__.py: Enables running as a script.
+    - cli.py: Command-line interface implementation.
+    - printer.py: Functions to print the dependency graph.
+    - resolver.py: Dependency resolution logic.
+- tests/: Unit tests for the package.
+    - test_data/: Test JSON files.
+    - __init__.py: Test package initialization.
+    - test_cli.py: Tests for cli.py.
+    - test_printer.py: Tests for printer.py.
+    - test_resolver.py: Tests for resolver.py.
+- .gitignore: Specifies files for Git to ignore.
+- .pre-commit-config.yaml: Pre-commit hook configurations.
+- MANIFEST.in: Includes additional files in distributions.
+- README.md: Project overview and usage instructions.
+- generate_project_structure.py: Script to generate project structure in README.
+- pyproject.toml: Build system configuration.
+- requirements-dev.txt: Development dependencies.
+- requirements.txt: Production dependencies.
+- setup.cfg: Configuration for setup tools and linters.
+- setup.py: Package build and installation script.
+
 ## Development
 
 ### Development Tools Installation
 
-Install development libraries and pre-commit hooks to ensure code quality before each commit:
+Install development tools and pre-commit hooks to ensure code quality before each commit:
 
 ```bash
 pip install -e .[dev]
