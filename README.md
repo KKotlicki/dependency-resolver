@@ -100,7 +100,6 @@ dep-resolver/
 │   └── workflows/
 │       └── ci.yml
 ├── docs/
-│   ├── build/
 │   ├── source/
 │   │   ├── conf.py
 │   │   ├── dep_resolver.rst

@@ -30,6 +30,7 @@ def generate_tree(start_path=".", ignore_patterns_list=None):
         "htmlcov",
         "dep_resolver.egg-info",
         "venv",
+        "build",
     ]
     ignore_patterns_list.extend(extra_ignore_patterns)
 
