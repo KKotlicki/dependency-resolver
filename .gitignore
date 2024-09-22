@@ -55,9 +55,6 @@ htmlcov/
 # Local environment variables
 .env
 
-# Pre-commit hooks
-.pre-commit-config.yaml
-
 # Others
 *.swp
 *~
